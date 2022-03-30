@@ -1,0 +1,32 @@
+module.exports = [
+  {
+    eventID: 1,
+    name: "Drinks at the pub",
+    location: "Norbury",
+    postcode: "NE3 2JD",
+    time: 1233190380,
+    description: "Banter",
+    photo: "",
+    personID: 1,
+  },
+  {
+    eventID: 2,
+    name: "Beachside Funtimes",
+    location: "Exmouth",
+    postcode: "EX12 3GG",
+    time: 2832938239,
+    description: "Wow beaches",
+    photo: "",
+    personID: 3,
+  },
+  {
+    eventID: 3,
+    name: "Backdoor Bollywood Cinema",
+    location: "Tower Hamlets",
+    postcode: "SW3 3EE",
+    time: 2233190380,
+    description: "Banter",
+    photo: "",
+    personID: 1,
+  },
+];
