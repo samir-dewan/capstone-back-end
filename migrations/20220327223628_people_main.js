@@ -7,7 +7,7 @@ exports.up = function (knex) {
       table.string('nationality').notNullable();
       table.string('townOfOrigin').notNullable();
       table.string('addressOfOrigin').notNullable();
-    //   table.blob('photo');
+      table.specificType('photo', 'blob');
       table.string('email').notNullable();
       table.json('interests').notNullable();
       table.timestamp('birthday').notNullable();
@@ -40,7 +40,7 @@ exports.up = function (knex) {
       t.string('postcode').notNullable();
       t.timestamp('time').notNullable();
       t.string('description');
-    //   t.blob('photo');
+      t.specificType('photo', 'blob');
       t.string('personID');
   })
   .createTable('attendees', (t) => {
