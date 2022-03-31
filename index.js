@@ -12,10 +12,10 @@ const eventsRoute = require("./routes/eventsRoute");
 const peopleRoute = require("./routes/peopleRoute");
 
 app.use("/events/:eventid", attendeesRoute);
-app.use("./chat", chatroomsRoute);
-app.use("./chat/:chatroomID", commentsRoute);
-app.use("./connect", connectionsRoute);
-app.use("./events", eventsRoute);
+app.use("/chat/:personID", chatroomsRoute);
+app.use("/chat/:personID/:chatroomID", commentsRoute);
+app.use("/connect", connectionsRoute);
+app.use("/events", eventsRoute);
 app.use("/home", peopleRoute);
 app.use("/connect", peopleRoute);
 

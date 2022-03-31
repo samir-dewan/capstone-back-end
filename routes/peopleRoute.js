@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const controller = require("../controllers/peopleController");
 
-router.route("/").get("controller");
+router.route("/:personID").get(controller.findPeopleByID);
+
 
 module.exports = router;
