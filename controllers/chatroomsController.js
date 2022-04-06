@@ -1,4 +1,4 @@
-const knex = require("knex")(require("../knexfile").development);
+const knex = require("knex")(require("../knexfile"));
 
 exports.getChatroomsForID = async (req, res) => {
   try {
@@ -15,11 +15,7 @@ exports.getChatroomsForID = async (req, res) => {
 
 exports.postChatroomForID = async (req, res) => {
   if (!req.body.chatroomName || !req.body.people) {
-    return res
-      .status(400)
-      .send(
-        "No chatroom name has been given."
-      );
+    return res.status(400).send("No chatroom name has been given.");
   }
 
   try {

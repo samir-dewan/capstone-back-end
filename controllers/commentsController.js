@@ -1,4 +1,4 @@
-const knex = require("knex")(require("../knexfile").development);
+const knex = require("knex")(require("../knexfile"));
 
 exports.getCommentsFromRoom = async (req, res) => {
   try {
@@ -9,13 +9,17 @@ exports.getCommentsFromRoom = async (req, res) => {
   } catch {
     res
       .status(400)
-      .send(`Error retrieving comments with chatroom ID ${req.params.chatroomID}`);
+      .send(
+        `Error retrieving comments with chatroom ID ${req.params.chatroomID}`
+      );
   }
 };
 
 exports.postComment = async (req, res) => {
   if (!req.body.comment || !req.body.personID || !req.body.chatroomID) {
-    return res.status(400).send("No comment, personID, or chatroomID was given.");
+    return res
+      .status(400)
+      .send("No comment, personID, or chatroomID was given.");
   }
 
   try {

@@ -7,8 +7,7 @@ const eventsData = require("../seed_data/events");
 const peopleData = require("../seed_data/people");
 
 exports.seed = function (knex) {
-  return knex("attendees")
-    .del()
+  return knex("attendees").del()
     .then(function () {
       return knex("attendees").insert(attendeesData);
     })

@@ -3,6 +3,6 @@ const controller = require("../controllers/connectionsController");
 
 router.route("/").get(controller.getPendingConnections);
 router.route("/").post(controller.sendConnection);
-router.route("/").update(controller.acceptConnection);
+router.route("/").put(controller.acceptConnection);
 
 module.exports = router;

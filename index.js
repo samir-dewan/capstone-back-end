@@ -15,9 +15,9 @@ app.use("/events/:eventid", attendeesRoute);
 app.use("/chat/:personID", chatroomsRoute);
 app.use("/chat/:personID/:chatroomID", commentsRoute);
 app.use("/:personID/connect", connectionsRoute);
-app.use("/events", eventsRoute);
-app.use("/home", peopleRoute);
-app.use("/connect", peopleRoute);
+// app.use("/events", eventsRoute);
+// app.use("/home", peopleRoute);
+// app.use("/connect", peopleRoute);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
