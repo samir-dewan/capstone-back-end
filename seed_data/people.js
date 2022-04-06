@@ -43,7 +43,7 @@ module.exports = [
     interests: ["football", "pub"],
     birthday: 213121241,
     description: "",
-    address: "16 Carel Road, Wellington, Sussex, SW3 3TL",
+    address: "16 Castrel Road, Budson, Surrey, SW3 3TL",
     lastLogin: 213213092,
     createdAt: 239239329,
   },
