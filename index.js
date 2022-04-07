@@ -16,7 +16,7 @@ app.use("/chat/:personID", chatroomsRoute);
 app.use("/chat/:personID/:chatroomID", commentsRoute);
 app.use("/:personID/connect", connectionsRoute);
 // app.use("/events", eventsRoute);
-// app.use("/home", peopleRoute);
+app.use("/home", peopleRoute);
 // app.use("/connect", peopleRoute);
 
 app.listen(PORT, () => {

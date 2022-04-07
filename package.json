@@ -16,6 +16,7 @@
     "fs": "^0.0.1-security",
     "knex": "^1.0.4",
     "mysql": "^2.18.1",
+    "node-postcodes.io": "^1.0.3",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {

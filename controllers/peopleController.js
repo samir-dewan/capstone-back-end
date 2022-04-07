@@ -18,7 +18,7 @@ exports.findPersonByID = async (req, res) => {
     try {
         const data = await knex("people")
         .select("*")
-        .where({personID: req.body.personID});
+        .where({personID: req.params.personID});
         res.status(200).json(data);
     }
     catch {
