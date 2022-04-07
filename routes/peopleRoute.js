@@ -1,7 +1,8 @@
-// const router = require("express").Router();
-// const controller = require("../controllers/peopleController");
+const router = require("express").Router();
+const controller = require("../controllers/peopleController");
 
-// router.route("/:personID").get(controller.findPeopleByID);
+router.route("/").get(controller.getPeople);
+router.route("/:personID").get(controller.findPersonByID);
 
 
-// module.exports = router;
+module.exports = router;
