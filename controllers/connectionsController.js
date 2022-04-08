@@ -1,6 +1,7 @@
 const knex = require("knex")(require("../knexfile"));
 
 exports.getPendingConnections = async (req, res) => {
+  console.log(req.params.personID);
   try {
     const data = await knex("connections")
       .select("*")
