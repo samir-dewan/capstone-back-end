@@ -3,9 +3,7 @@ const controller = require("../controllers/peopleController");
 
 router.route("/").get(controller.getPeople);
 router.route("/:personID").get(controller.findPersonByID);
-router.route("/outgoingConnect").get(controller.getPeopleByOutgoingConnectionID)
-router
-  .route("/incomingConnect")
-  .get(controller.getPeopleByIncomingConnectionID);
+router.route("/outgoingconnect/:personID").get(controller.getPeopleByOutgoingConnectionID);
+router.route("/incomingconnect/:personID").get(controller.getPeopleByIncomingConnectionID);
 
 module.exports = router;

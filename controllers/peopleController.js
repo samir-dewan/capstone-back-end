@@ -28,9 +28,12 @@ exports.findPersonByID = async (req, res) => {
 
 exports.getPeopleByOutgoingConnectionID = async (req, res) => {
   try {
+    const id = req.params.personID
+    console.log(id)
     const data = await knex("people")
     .join("connections", "connections.peopleID_1", "=", "people.peopleID")
-    .select("*");
+    .select("*")
+    .where("people.personID", {id});
     res.status(200).json(data);
   }
   catch {
